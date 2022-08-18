@@ -34,6 +34,6 @@ app.post("/gantiPassword", Controller.submitGantiPassword);
 app.get("/profile/delete/:id", Controller.deletePosting);
 app.get("/logout", Controller.logout);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening on port ${port}`);
 });
