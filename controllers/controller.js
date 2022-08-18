@@ -67,7 +67,6 @@ class Controller {
           Object.keys(user).length &&
           bcrypt.compareSync(password, user.password)
         ) {
-          console.log("oke");
           req.session.loggedin = true;
           req.session.username = username;
           req.session.userId = user.id;
@@ -158,7 +157,6 @@ class Controller {
           if (user.address) {
             cuaca = await getWeather(user.address);
           }
-          console.log(cuaca, "===========");
           return ProgrammingLanguage.findAll();
         })
         .then((pll) => {
@@ -172,7 +170,6 @@ class Controller {
           });
         })
         .catch((err) => {
-          console.log(err);
           res.send(err);
         });
     });
