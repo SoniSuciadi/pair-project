@@ -1,7 +1,7 @@
 const express = require("express");
 const Controller = require("./controllers/controller");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const session = require("express-session");
 const path = require("path");
 const fileUpload = require("express-fileupload");
