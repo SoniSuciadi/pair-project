@@ -14,7 +14,7 @@ module.exports = {
      */
     let pl = JSON.parse(
       fs.readFileSync(
-        "../Pair-Project/data/programming-languages.json",
+        "../pair-project/data/programming-languages.json",
         "utf-8"
       )
     );
